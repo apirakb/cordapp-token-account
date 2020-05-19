@@ -20,6 +20,17 @@ buildscript {
         //springboot
         spring_boot_version = '2.0.2.RELEASE'
         spring_boot_gradle_plugin_version = '2.0.2.RELEASE'
+
+        //account
+        accounts_release_group = 'com.r3.corda.lib.accounts'
+        accounts_release_version = '1.0'
+        //CI
+        confidential_id_release_group = "com.r3.corda.lib.ci"
+        confidential_id_release_version = "1.0"
+
+        //token
+        tokens_release_group = 'com.r3.corda.lib.tokens'
+        tokens_release_version = '1.1'
     }
 
     repositories {
@@ -27,6 +38,14 @@ buildscript {
         mavenCentral()
         jcenter()
         maven { url 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-releases' }
+        maven { url "http://ci-artifactory.corda.r3cev.com/artifactory/corda-releases" }
+        maven { url 'https://ci-artifactory.corda.r3cev.com/artifactory/corda' }
+        // Corda dependencies for the patched Quasar version
+        maven { url "https://software.r3.com/artifactory/corda-dependencies" } // access to the patched Quasar version
+        maven { url 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-lib'}
+        maven { url 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-lib-dev'}
+        maven { url 'http://ci-artifactory.corda.r3cev.com/artifactory/corda-lib'}
+        maven { url 'http://ci-artifactory.corda.r3cev.com/artifactory/corda-lib-dev'}
     }
 
     dependencies {
@@ -49,6 +68,16 @@ allprojects {
         mavenCentral()
         maven { url 'https://software.r3.com/artifactory/corda' }
         maven { url 'https://jitpack.io' }
+
+        maven { url 'https://ci-artifactory.corda.r3cev.com/artifactory/corda' }
+        maven { url 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-lib' }
+        maven { url 'https://ci-artifactory.corda.r3cev.com/artifactory/corda-tokens-dev' }
+        maven { url "http://ci-artifactory.corda.r3cev.com/artifactory/corda-dev" }
+        maven { url "http://ci-artifactory.corda.r3cev.com/artifactory/corda-releases" }
+        maven { url "http://ci-artifactory.corda.r3cev.com/artifactory/corda-lib" }
+        maven { url "http://ci-artifactory.corda.r3cev.com/artifactory/corda-lib-dev" }
+        maven { url "https://repo.gradle.org/gradle/libs-releases-local/" }
+
     }
 
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
@@ -67,6 +96,7 @@ allprojects {
     }
 }
 
+
 apply plugin: 'net.corda.plugins.cordapp'
 apply plugin: 'net.corda.plugins.cordformation'
 apply plugin: 'net.corda.plugins.quasar-utils'
@@ -80,6 +110,9 @@ sourceSets {
 }
 
 dependencies {
+    // Kotlin.
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
     // Corda dependencies.
     cordaCompile "$corda_core_release_group:corda-core:$corda_core_release_version"
     cordaRuntime "$corda_release_group:corda-node-api:$corda_release_version"
@@ -92,6 +125,17 @@ dependencies {
     cordaCompile "org.apache.logging.log4j:log4j-slf4j-impl:${log4j_version}"
     cordaCompile "org.apache.logging.log4j:log4j-web:${log4j_version}"
     cordaCompile "org.slf4j:jul-to-slf4j:$slf4j_version"
+
+    //Account lib
+    cordapp "$confidential_id_release_group:ci-workflows:$confidential_id_release_version"
+    cordapp "$accounts_release_group:accounts-contracts:$accounts_release_version"
+    cordapp "$accounts_release_group:accounts-workflows:$accounts_release_version"
+
+    // Token SDK dependencies.
+    cordapp "$tokens_release_group:tokens-contracts:$tokens_release_version"
+    cordapp "$tokens_release_group:tokens-money:$tokens_release_version"
+    cordapp "$tokens_release_group:tokens-selection:$tokens_release_version"
+    cordapp "$tokens_release_group:tokens-workflows:$tokens_release_version"
 }
 
 cordapp {
@@ -122,11 +166,21 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         projectCordapp {
             deploy = false
         }
+
+        cordapp("$confidential_id_release_group:ci-workflows:$confidential_id_release_version")
+        cordapp("$accounts_release_group:accounts-contracts:$accounts_release_version")
+        cordapp("$accounts_release_group:accounts-workflows:$accounts_release_version")
+
+        cordapp("$tokens_release_group:tokens-contracts:$tokens_release_version")
+        cordapp("$tokens_release_group:tokens-money:$tokens_release_version")
+        cordapp("$tokens_release_group:tokens-selection:$tokens_release_version")
+        cordapp("$tokens_release_group:tokens-workflows:$tokens_release_version")
+
         cordapp project(':contracts')
         cordapp project(':workflows')
     }
     node {
-        name "O=Notary,L=London,C=GB"
+        name "O=Notary,L=Bangkok,C=TH"
         notary = [validating : false]
         p2pPort 10002
         rpcSettings {
@@ -135,7 +189,7 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         }
     }
     node {
-        name "O=PartyA,L=London,C=GB"
+        name "O=ZCentral,OU=Z,L=Bangkok,C=TH"
         p2pPort 10005
         rpcSettings {
             address("localhost:10006")
@@ -144,7 +198,7 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
     }
     node {
-        name "O=PartyB,L=New York,C=US"
+        name "O=AParty,OU=A,L=Bangkok,C=TH"
         p2pPort 10008
         rpcSettings {
             address("localhost:10009")
@@ -152,6 +206,15 @@ task deployNodes(type: net.corda.plugins.Cordform, dependsOn: ['jar']) {
         }
         rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
     }
+    // node {
+    //    name "O=KBANK,OU=Bank,L=Bangkok,C=TH"
+    //    p2pPort 10010
+    //    rpcSettings {
+    //        address("localhost:10011")
+    //        adminAddress("localhost:10051")
+    //    }
+    //    rpcUsers = [[ user: "user1", "password": "test", "permissions": ["ALL"]]]
+    // }
 
 }
 
