@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.corda:corda-tools-cliutils:4.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/net.corda/corda-tools-cliutils/4.4/3c18ee3b1eb94bf2bf0a6ad5a2a7aa47c22f1b4a/corda-tools-cliutils-4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/net.corda/corda-tools-cliutils/4.4/d1be2a771f4dbe467be8b1fe198b511420723d23/corda-tools-cliutils-4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

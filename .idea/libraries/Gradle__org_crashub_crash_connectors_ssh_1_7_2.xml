@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.crashub:crash.connectors.ssh:1.7.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.crashub/crash.connectors.ssh/1.7.2/fbfbbbec7f1df683679a3917653b830d199c837c/crash.connectors.ssh-1.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.crashub/crash.connectors.ssh/1.7.2/5353785bd6223de19925981100cbdbf44c3ae88f/crash.connectors.ssh-1.7.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

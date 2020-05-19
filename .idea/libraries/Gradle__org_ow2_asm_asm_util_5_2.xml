@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ow2.asm:asm-util:5.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/5.2/9408ea14e73b7c9b427545a1b84923d6afaf8e1e/asm-util-5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/5.2/ed60d4287d18996bc940f26656c570532b20d863/asm-util-5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

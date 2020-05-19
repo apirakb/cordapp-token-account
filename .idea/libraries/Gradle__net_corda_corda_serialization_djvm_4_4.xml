@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.corda:corda-serialization-djvm:4.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/net.corda/corda-serialization-djvm/4.4/5210c89ac4111c77d7121faa336ae9348095e752/corda-serialization-djvm-4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/net.corda/corda-serialization-djvm/4.4/e9206914069a0e58da0986260d9340407215c863/corda-serialization-djvm-4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

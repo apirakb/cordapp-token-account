@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-token-account.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-token-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/cordapp-token-account.clients.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/cordapp-token-account.clients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/cordapp-token-account.clients.main.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/cordapp-token-account.clients.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/clients/cordapp-token-account.clients.test.iml" filepath="$PROJECT_DIR$/.idea/modules/clients/cordapp-token-account.clients.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/cordapp-token-account.contracts.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/cordapp-token-account.contracts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/cordapp-token-account.contracts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/cordapp-token-account.contracts.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/contracts/cordapp-token-account.contracts.test.iml" filepath="$PROJECT_DIR$/.idea/modules/contracts/cordapp-token-account.contracts.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-token-account.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-token-account.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cordapp-token-account.test.iml" filepath="$PROJECT_DIR$/.idea/modules/cordapp-token-account.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.integrationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.main.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.test.iml" filepath="$PROJECT_DIR$/.idea/modules/workflows/cordapp-token-account.workflows.test.iml" />
+    </modules>
+  </component>
+</project>

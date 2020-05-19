@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="cordapp-template-kotlin.clients.main" target="11" />
+      <module name="cordapp-template-kotlin.clients.test" target="11" />
+      <module name="cordapp-template-kotlin.contracts.main" target="11" />
+      <module name="cordapp-template-kotlin.contracts.test" target="11" />
+      <module name="cordapp-template-kotlin.main" target="11" />
+      <module name="cordapp-template-kotlin.test" target="11" />
+      <module name="cordapp-template-kotlin.workflows.integrationTest" target="11" />
+      <module name="cordapp-template-kotlin.workflows.main" target="11" />
+      <module name="cordapp-template-kotlin.workflows.test" target="11" />
+      <module name="cordapp-token-account.clients.main" target="11" />
+      <module name="cordapp-token-account.clients.test" target="11" />
+      <module name="cordapp-token-account.contracts.main" target="11" />
+      <module name="cordapp-token-account.contracts.test" target="11" />
+      <module name="cordapp-token-account.main" target="11" />
+      <module name="cordapp-token-account.test" target="11" />
+      <module name="cordapp-token-account.workflows.integrationTest" target="11" />
+      <module name="cordapp-token-account.workflows.main" target="11" />
+      <module name="cordapp-token-account.workflows.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

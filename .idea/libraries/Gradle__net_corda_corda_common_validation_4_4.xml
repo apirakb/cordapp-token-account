@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: net.corda:corda-common-validation:4.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/net.corda/corda-common-validation/4.4/4513b26772f8ebfa73e618988c1cacf08e739fe2/corda-common-validation-4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/net.corda/corda-common-validation/4.4/8ffa4d077b0fa2a7b3fee6195445dabf7cbcbf1b/corda-common-validation-4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

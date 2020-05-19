@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.crashub:crash.cli:1.7.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.crashub/crash.cli/1.7.2/90d3ac4cdab01e1ce19c85169e9cf0e19f87c296/crash.cli-1.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.crashub/crash.cli/1.7.2/d53827ac13b67a7b2e151b7878caba3e402a56b9/crash.cli-1.7.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
